@@ -1,9 +1,6 @@
 <?php 
     include_once '../config/db.php';
-    header('Access-Control-Allow-Origin: *');
-    header('Content-Type: application/json');
-    header('Access-Control-Allow-Methods: POST, OPTIONS');
-    header('Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With');
+    require_once '../config/request_config.php';
     $data = json_decode(file_get_contents("php://input"));
     $name = $data->name;
     $email = $data->email;

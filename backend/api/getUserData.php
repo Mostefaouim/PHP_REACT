@@ -1,7 +1,6 @@
 <?php
     include_once '../config/db.php';
-    header('Access-Control-Allow-Origin: *');
-    header('Content-Type: application/json');
+    require_once '../config/request_config.php';    
     if (isset($_GET['id'])) {
         $id = mysqli_real_escape_string($conn, $_GET['id']);
 

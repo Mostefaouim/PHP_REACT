@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useNavigate, useParams, Link } from 'react-router-dom';
+import BackAtHome from './BackAtHome';
 
 function DeleteUser() {  
     const backendurl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
@@ -23,7 +24,7 @@ function DeleteUser() {
             <p>Do you want to delete this user?</p>
             <form className="container">
                 <button type="submit" className="btn btn-danger me-3" onClick={deleteUser}>Delete</button>
-                <Link className="btn btn-info" to={'/'}>Cancel</Link>
+                <BackAtHome />
             </form>
         </>
     );

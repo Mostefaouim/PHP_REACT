@@ -1,8 +1,6 @@
 <?php
     include_once '../config/db.php';
-    header('Access-Control-Allow-Origin: *');
-    header('Content-Type: application/json');
-    header('Access-Control-Allow-Methods: DELETE');
+    require_once '../config/request_config.php';
     $data = json_decode(file_get_contents("php://input"));
     $id = $_GET['id'];
     $sql = "DELETE FROM users WHERE id = '$id'";

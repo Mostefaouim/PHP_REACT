@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams, Link } from 'react-router-dom';
+import BackAtHome from './BackAtHome';
 
 function UpdateUser() {
     const backendurl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
@@ -68,7 +69,7 @@ function UpdateUser() {
                     />
                 </div>
                 <button type="submit" className="btn btn-primary">Update</button>
-                <Link className="btn btn-secondary ms-2" to="/">Cancel</Link>
+                <BackAtHome />
             </form>
         </>
     );
